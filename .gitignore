@@ -131,3 +131,28 @@ dist
 
 tasks/TerraformOutput/src/index.js
 **.vsix
+# Terraform Ignore Stuff
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+**/env.sh
+**/*.plan
+# Just in case - don't ignore some needed files
+# !example_override.tf
+.idea/
+**/.DS_Store
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+# usually not ignored but here its fine.
+.terraform.lock.hcl 
+
+*.map
+.taskkey
+*.tfplan

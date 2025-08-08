@@ -15,6 +15,18 @@
   "instanceNameFormat": "Terraform Load Output",
   "inputs": [
     {
+      "name": "terraformTool",
+      "type": "pickList",
+      "label": "Choose terraform or tofu. Will try to find in PATH",
+      "options": {
+        "Terraform": "terraform",
+        "OpenTofu": "tofu",
+        "tf from tenv": "tf"
+      },
+      "defaultValue": "terraform",
+      "helpMarkDown": "Defaults to terraform. Specify `tofu` to use OpenTofu (must already be installed)"
+    },
+    {
       "name": "useGlobPattern",
       "type": "boolean",
       "label": "Use Glob Pattern Search",

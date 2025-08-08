@@ -28,12 +28,17 @@ The following inputs are available to override
 
 | Input             | Type     | Default                                         | Description                                                                                         |
 | ----------------- | -------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| terraformTool     | string   | "terraform"                                     | Choose which terraform tool should be used render the plan (see Note)                               |
 | useGlobPattern    | boolean  | false                                           | Whether to use a search pattern to find output files                                                |
 | outputFilePattern | string   | \*\*_/_\*.tfplan                                | File pattern used to find output files (only visible if useGlobPattern is true)                     |
 | searchDirectory   | string   | $(System.DefaultWorkingDirectory)               | Directory the file search should start (only visible if useGlobPattern is true)                     |
 | inferArtifactName | boolean  | false                                           | Infer artifact name from outputFilePath filename (only visible if useGlobPattern is false)          |
 | outputFilePath    | filePath | $(System.DefaultWorkingDirectory)/output.tfplan | File path of the outfile file (only visible if useGlobPattern is false)                             |
 | artifactName      | string   |                                                 | Artifact name used in the dropdown (only visible if useGlobPattern and inferArtifactName are false) |
+
+
+> Note: 
+> The tool you use to render the plan here should already exist on the current agent. 
 
 ## Results
 

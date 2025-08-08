@@ -2,8 +2,9 @@ import * as path from 'path';
 import * as task from 'azure-pipelines-task-lib/task';
 import { TaskResult } from 'azure-pipelines-task-lib/task';
 import { IExecOptions } from 'azure-pipelines-task-lib/toolrunner';
+import * as os from 'os';
 
-function handleTerraformOutput(terraformPath: string, filePath: string, workingDirectory: string, inferArtifactName: boolean) {
+function handleTerraformOutput(terraformPath: string, filePath: string, workingDirectory: string, inferArtifactName: boolean ) {
   const terraformTool = task.tool(terraformPath);
   terraformTool.arg(['show', filePath]);
 
@@ -33,8 +34,11 @@ function handleTerraformOutput(terraformPath: string, filePath: string, workingD
 
     artifactName = file.name;
   }
+  task.debug(`artifactName: ${artifactName}`);
 
-  const stagingPath = task.getVariable('Build.ArtifactStagingDirectory') ?? task.getVariable('System.ArtifactsDirectory');
+  const stagingPath = task.getVariable('Build.ArtifactStagingDirectory') ?? task.getVariable('System.ArtifactsDirectory') ?? os.tmpdir() ;
+  task.debug(`stagingPath: ${stagingPath}` );
+
   const outputFile = path.join(stagingPath, artifactName);
   task.writeFile(outputFile, result.stdout);
   task.debug(`Output file written: ${outputFile}`);
@@ -44,8 +48,9 @@ function handleTerraformOutput(terraformPath: string, filePath: string, workingD
 
 async function run() {
   let terraformPath: string;
+  const terraformToolInput = task.getInput('terraformTool') || "terraform"; 
   try {
-    terraformPath = task.which('terraform', true);
+    terraformPath = task.which(terraformToolInput, true);
   } catch (err) {
     throw 'Terraform CLI not found.';
   }
