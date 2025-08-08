@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "mocha tests",
     "test_terraform": "tsc; INPUT_outputFilePath=\"../../tf/test_terraform/tf.tfplan\" node src/index.js",
     "test_artifactName": "tsc; INPUT_outputFilePath=\"../../tf/test_terraform/tf.tfplan\" INPUT_artifactName=\"testingArtifactName\" node src/index.js",
     "test_tofu": "tsc; INPUT_outputFilePath=\"../../tf/test_tofu/tf.tfplan\" INPUT_terraformTool=tofu node src/index.js",

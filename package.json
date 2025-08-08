@@ -23,7 +23,7 @@
     "package-extension": "tfx extension create --manifests azure-devops-extension.json",
     "publish-extension": "tfx extension publish --manifests azure-devops-extension.json",
     "test": "set TEST_REPORT_FILENAME=test-results.xml jest --verbose",
-    "start:dev": "webpack-dev-server --mode development "
+    "start:dev": "webpack-dev-server --mode development"
   },
   "dependencies": {
     "azure-devops-extension-api": "^4.245.1",
