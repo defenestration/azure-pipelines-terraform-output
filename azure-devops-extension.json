@@ -1,12 +1,12 @@
 {
   "manifestVersion": 1,
   "id": "terraform-output",
-  "publisher": "JaydenMaalouf",
-  "version": "1.3.0-dev.0",
+  "publisher": "abrevicktsc",
+  "version": "1.3.0",
   "name": "Terraform Output",
   "description": "Adds a tab for Terraform Plan outputs",
   "galleryFlags": [
-    "Public"
+    "Private"
   ],
   "icons": {
     "default": "images/icon.png",
@@ -65,7 +65,7 @@
   ],
   "repository": {
     "type": "git",
-    "uri": "https://github.com/JaydenMaalouf/azure-pipelines-terraform-output"
+    "uri": "https://github.com/defenestration/azure-pipelines-terraform-output"
   },
   "contributions": [
     {
@@ -80,7 +80,7 @@
         "uri": "dist/TerraformTab/tabContent.html",
         "registeredObjectId": "registerBuild",
         "supportsTasks": [
-          "88279389-1419-4920-8f6c-b16cfccb90d9"
+          "27a16d7c-a9d9-401a-ab35-acfd9b2e3c78"
         ],
         "dynamic": true
       }
@@ -96,7 +96,7 @@
         "name": "Terraform Plan",
         "uri": "dist/TerraformTab/tabContent.html",
         "supportsTasks": [
-          "88279389-1419-4920-8f6c-b16cfccb90d9"
+          "27a16d7c-a9d9-401a-ab35-acfd9b2e3c78"
         ]
       }
     },

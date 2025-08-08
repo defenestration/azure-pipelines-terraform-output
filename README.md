@@ -1,7 +1,8 @@
 # Azure Pipelines - Terraform Output
 
 A small plugin that brings a Terraform Plan window into the pipeline and release results  
-The plugin is available on the Visual Studio Marketplace [here](https://marketplace.visualstudio.com/items?itemName=JaydenMaalouf.terraform-output)
+
+This is a fork of an existing plugin to add OpenTofu support. The original is [here](https://marketplace.visualstudio.com/items?itemName=JaydenMaalouf.terraform-output)
 
 ## Usage
 
