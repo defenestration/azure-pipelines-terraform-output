@@ -1,0 +1,22 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: '1.9.0'
+
+- script: |
+    cd tf/test_terraform
+    terraform init -input=false 
+    terraform plan -input=false -out output.tfplan
+  displayName: 'Run a multi-line script'
+
+- 
+- task: TerraformOutput@1
+  inputs:
+    outputFilePath: '$(System.DefaultWorkingDirectory)/tf/test_terraform/output.tfplan'
+    artifactName: 'test_terraform'
