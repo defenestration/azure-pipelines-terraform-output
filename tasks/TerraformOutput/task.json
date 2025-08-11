@@ -24,7 +24,7 @@
         "tf": "tf"
       },
       "defaultValue": "terraform",
-      "helpMarkDown": "Defaults to terraform. Specify `tofu` to use OpenTofu, or `tf` to use the alias provided in `tenv` (or your own?)."
+      "helpMarkDown": "Defaults to terraform. Specify `tofu` to use OpenTofu, or `tf` to use the alias provided in `tenv` or some other tools."
     },
     {
       "name": "useGlobPattern",

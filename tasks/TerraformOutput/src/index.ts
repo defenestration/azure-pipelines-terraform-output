@@ -42,8 +42,9 @@ function handleTerraformOutput(terraformPath: string, filePath: string, workingD
   const outputFile = path.join(stagingPath, artifactName);
   task.writeFile(outputFile, result.stdout);
   task.debug(`Output file written: ${outputFile}`);
+  task.debug(`artifactName: ${artifactName}`);
   task.addAttachment('terraform.plan', artifactName, outputFile);
-  console.log(`Uploaded Plan Output.`);
+  console.log(`Uploaded Plan Output from file ${outputFile} to Terraform Plan name ${artifactName}`);
 }
 
 async function run() {
