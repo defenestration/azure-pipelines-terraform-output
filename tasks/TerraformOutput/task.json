@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-  "id": "27a16d7c-a9d9-401a-ab35-acfd9b2e3c78",
+  "id": "d1ff339a-740f-4ec6-952a-121f8b9005c2",
   "name": "TerraformOutput",
   "friendlyName": "Terraform Load Output",
   "description": "Load Terraform Output into Terraform Tab",
