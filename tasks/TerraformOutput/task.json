@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-  "id": "88279389-1419-4920-8f6c-b16cfccb90d9",
+  "id": "27a16d7c-a9d9-401a-ab35-acfd9b2e3c78",
   "name": "TerraformOutput",
   "friendlyName": "Terraform Load Output",
   "description": "Load Terraform Output into Terraform Tab",
   "helpMarkDown": "",
   "category": "Utility",
-  "author": "Jayden Maalouf",
+  "author": "Alan B",
   "version": {
     "Major": 1,
     "Minor": 3,
