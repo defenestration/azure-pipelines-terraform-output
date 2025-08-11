@@ -52,7 +52,8 @@ async function run() {
   try {
     terraformPath = task.which(terraformToolInput, true);
   } catch (err) {
-    throw 'Terraform CLI not found.';
+    task.debug(err)
+    throw `Terraform Tool \"${terraformToolInput}\" not found - ${err}`;
   }
 
   const useGlobPattern = task.getBoolInput('useGlobPattern');

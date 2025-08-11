@@ -17,14 +17,14 @@
     {
       "name": "terraformTool",
       "type": "pickList",
-      "label": "Choose terraform or tofu. Will try to find in PATH",
+      "label": "Choose tool to parse the terraform plan file (must already be installed).",
       "options": {
-        "Terraform": "terraform",
-        "OpenTofu": "tofu",
-        "tf from tenv": "tf"
+        "terraform": "terraform",
+        "tofu": "tofu",
+        "tf": "tf"
       },
       "defaultValue": "terraform",
-      "helpMarkDown": "Defaults to terraform. Specify `tofu` to use OpenTofu (must already be installed)"
+      "helpMarkDown": "Defaults to terraform. Specify `tofu` to use OpenTofu, or `tf` to use the alias provided in `tenv` (or your own?)."
     },
     {
       "name": "useGlobPattern",
