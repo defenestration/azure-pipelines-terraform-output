@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "terraform-output",
   "publisher": "abrevicktsc",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "name": "Terraform Output",
   "description": "Adds a tab for Terraform Plan outputs",
   "galleryFlags": [
